@@ -43,4 +43,4 @@ class SimpleReport(Report):
                 companies[item.company_name] = 1
             else:
                 companies[item.company_name] += 1
-        return max(key for key in companies)
+        return max(companies, key=lambda item: companies[item])
